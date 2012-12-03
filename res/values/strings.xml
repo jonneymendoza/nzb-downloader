@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">NZB Downloader</string>
+    <string name="Welcome_title">Welcome</string>
+    <string name="welcome_text">Welcome to the nzb downloader app that lets you access your SabNZB server and add nzb files in your que from nzbMatrix. Press the Continue button to begin setup</string>
+    <string name="continue_to_setup_text">Continue to setup</string>
+    <string name="sab_settings_title">Sab Server Settings</string>
+    <string name="sab_api_title">API key</string>
+    <string name="sab_username_title">Username:</string>
+    <string name="password_title">Password:</string>
+    <string name="ip_address_title">IP Address:</string>
+    <string name="port_title">Port:</string>
+    <string name="save_text">Save</string>
+    <string name="test_connection_text">Test Connection</string>
+</resources>
