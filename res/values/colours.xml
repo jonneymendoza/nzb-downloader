@@ -3,5 +3,8 @@
 	<color name="orange">#334FB3</color>
 	<color name="darkYellow">#989f49</color>
 	<color name="brightYellow">#eff88b</color>
-
+	
+	<color name="blue">#00CCFF</color>
+	<color name="darkBlue">#000066</color>
+	<color name="lightBlue">#99CCFF</color>
 </resources>

@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <style name="ActivityStyle">
+    <style name="ActivityStyleYellow">
         <item name="android:background">@color/brightYellow</item>
         <item name="android:textColor">@color/darkYellow</item>
         <item name="android:padding">@dimen/text_padding</item>
     </style>
-
+    
+     <style name="ActivityStyleBlue">
+        <item name="android:background">@color/lightBlue</item>
+        <item name="android:textColor">@color/darkBlue</item>
+        <item name="android:paddingBottom">@dimen/text_padding</item>
+    </style>
 </resources>

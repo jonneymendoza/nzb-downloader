@@ -2,6 +2,8 @@ package com.josh.nzb.downloader.screens.main;
 
 import com.josh.nzb.downloader.R;
 import com.josh.nzb.downloader.screens.sabnzbd.SabSettings;
+import com.josh.nzb.downloader.utils.Storage;
+import com.josh.nzb.downloader.utils.StorageType;
 
 import android.app.ActionBar;
 import android.app.Activity;
@@ -29,7 +31,7 @@ public class WelcomeScreen extends Activity {
 
 	public void onSetupClicked(View v) {
 		// set shared pref value for welcome screen as true.
-
+		Storage.open(getApplicationContext()).save(StorageType.WELCOME_SCREEN, true);
 		// display main setup screen
 		startActivity(new Intent(this, SabSettings.class));
 	}
