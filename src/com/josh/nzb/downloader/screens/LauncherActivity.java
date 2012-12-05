@@ -14,6 +14,8 @@ import android.os.Bundle;
  */
 public class LauncherActivity extends Activity {
 
+	private Storage storage;
+
 	/*
 	 * (non-Javadoc)
 	 * @see android.app.Activity#onCreate(android.os.Bundle)
@@ -23,11 +25,12 @@ public class LauncherActivity extends Activity {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 
-		if (!(Boolean)Storage.open(getApplicationContext()).getCasted(StorageType.WELCOME_SCREEN)) {
+		storage = Storage.open(getApplicationContext());
+		if ((Boolean)storage.getCasted(StorageType.WELCOME_SCREEN) == null) {
 			launchWelcomeScreen();
-		} else if (!(Boolean)Storage.open(getApplicationContext()).getCasted(StorageType.COMPLETED_SAB_TEST_SETUP)) {
+		} else if ((Boolean)storage.getCasted(StorageType.COMPLETED_SAB_TEST_SETUP) == null) {
 			launchSabSetup();
-		} else if (!(Boolean)Storage.open(getApplicationContext()).getCasted(StorageType.COMPLETELED_NZBMATRIX_SETUP)) {
+		} else if ((Boolean)storage.getCasted(StorageType.COMPLETELED_NZBMATRIX_SETUP) == null) {
 			launchNzbSetup();
 		} else {
 			// launch main content

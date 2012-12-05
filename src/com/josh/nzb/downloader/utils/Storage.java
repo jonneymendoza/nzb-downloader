@@ -95,7 +95,7 @@ public class Storage {
 	 * @param s the storage type
 	 * @param value the value
 	 */
-	public void save(StorageType s, boolean value) {
+	public void saveBoolean(StorageType s, boolean value) {
 		if (s.cls.isAssignableFrom(Boolean.class)) {
 			editor = pref.edit();
 			editor.putBoolean(s.getKey(), value);
