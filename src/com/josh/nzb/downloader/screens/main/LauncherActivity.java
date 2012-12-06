@@ -1,7 +1,6 @@
-package com.josh.nzb.downloader.screens;
+package com.josh.nzb.downloader.screens.main;
 
-import com.josh.nzb.downloader.screens.main.WelcomeScreen;
-import com.josh.nzb.downloader.screens.settings.SabNzbdSetupActivity;
+import com.josh.nzb.downloader.screens.sabnzbd.SabSettings;
 import com.josh.nzb.downloader.utils.Storage;
 import com.josh.nzb.downloader.utils.StorageType;
 
@@ -26,11 +25,11 @@ public class LauncherActivity extends Activity {
 		super.onCreate(savedInstanceState);
 
 		storage = Storage.open(getApplicationContext());
-		if ((Boolean)storage.getCasted(StorageType.WELCOME_SCREEN) == null) {
+		if (!(Boolean)storage.getCasted(StorageType.WELCOME_SCREEN)) {
 			launchWelcomeScreen();
-		} else if ((Boolean)storage.getCasted(StorageType.COMPLETED_SAB_TEST_SETUP) == null) {
+		} else if (!(Boolean)storage.getCasted(StorageType.COMPLETED_SAB_TEST_SETUP)) {
 			launchSabSetup();
-		} else if ((Boolean)storage.getCasted(StorageType.COMPLETELED_NZBMATRIX_SETUP) == null) {
+		} else if (!(Boolean)storage.getCasted(StorageType.COMPLETELED_NZBMATRIX_SETUP)) {
 			launchNzbSetup();
 		} else {
 			// launch main content
@@ -45,7 +44,7 @@ public class LauncherActivity extends Activity {
 	}
 
 	private void launchSabSetup() {
-		startActivity(new Intent(this, SabNzbdSetupActivity.class));
+		startActivity(new Intent(this, SabSettings.class));
 	}
 
 	private void launchNzbSetup() {
@@ -53,7 +52,7 @@ public class LauncherActivity extends Activity {
 	}
 
 	private void launchMainContentScreen() {
-		// startActivity(new Intent(this, SabNzbdSetupActivity.class));
+		startActivity(new Intent(this, MainScreenActivity.class));
 	}
 
 }

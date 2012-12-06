@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+  <!-- styles for text view components-->
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="textViewBlue" parent="@android:style/Widget.TextView">
+        <item name="android:textColor">@color/darkBlue</item>
+          <item name="android:paddingBottom">@dimen/text_padding</item>
+    </style>
+
+    <style name="textViewYellow" parent="@android:style/Widget.TextView">
+        <item name="android:textColor">@color/darkYellow</item>
+          <item name="android:paddingBottom">@dimen/text_padding</item>
+    </style>
+
+    <style name="editTextBlue" parent="@android:style/Widget.EditText">
+        <item name="android:paddingBottom">@dimen/text_padding</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/darkBlue</item>
+    </style>
+    
+     <style name="editTextYellow" parent="@android:style/Widget.EditText">
+        <item name="android:paddingBottom">@dimen/text_padding</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/darkYellow</item>
+    </style>
+
+</resources>

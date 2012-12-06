@@ -36,12 +36,10 @@ public class AppLog {
 		try {
 			StackTraceElement[] elements = t.getStackTrace();
 
-			for (int i = 0; i < elements.length; i++) {
-				Log.d("", "getSimpleClassName =" + getSimpleClassName(elements[i].getClassName()));
-			}
+			// for (int i = 0; i < elements.length; i++) {
+			//
+			// }
 
-			Log.d("", "");
-			Log.d("", "");
 			return elements[2].getClass().getSimpleName();
 
 		} finally {

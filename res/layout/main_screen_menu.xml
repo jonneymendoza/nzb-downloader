@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/menu_search"
+          android:title="@string/search_text"
+          android:showAsAction="ifRoom|withText" />
+    <item android:id="@+id/menu_sab"
+          android:title="@string/sab_text"
+          android:showAsAction="ifRoom|withText" />
+    <item android:id="@+id/menu_settings"
+          android:title="@string/settings_text"
+          android:showAsAction="ifRoom|withText" />
+    <item android:id="@+id/menu_refresh"
+          android:title="@string/refresh_text"
+          android:showAsAction="ifRoom|withText" />
+</menu>

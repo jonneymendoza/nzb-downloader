@@ -34,6 +34,7 @@ public class WelcomeScreen extends Activity {
 		Storage.open(getApplicationContext()).saveBoolean(StorageType.WELCOME_SCREEN, true);
 		// display main setup screen
 		startActivity(new Intent(this, SabSettings.class));
+		finish();
 	}
 
 }

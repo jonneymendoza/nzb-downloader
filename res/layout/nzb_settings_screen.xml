@@ -16,7 +16,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginLeft="@dimen/text_padding"
             android:layout_marginRight="@dimen/text_padding"
-            android:text="@string/sab_settings_title" />
+            android:text="@string/nzb_settings_title" />
 
         <TextView
             android:id="@+id/textView2"

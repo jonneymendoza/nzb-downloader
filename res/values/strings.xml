@@ -11,4 +11,9 @@
     <string name="port_title">Port:</string>
     <string name="save_text">Save</string>
     <string name="test_connection_text">Test Connection</string>
+    <string name="search_text">Search Nzb</string>
+    <string name="sab_text">Sab server</string>
+    <string name="settings_text">Settings</string>
+    <string name="refresh_text">refresh</string>
+    <string name="nzb_settings_title">NZB Matrix Settings</string>
 </resources>

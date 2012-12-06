@@ -2,7 +2,6 @@ package com.josh.nzb.downloader.utils;
 
 import java.util.EnumMap;
 
-
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
@@ -35,9 +34,18 @@ public class Storage {
 
 		map = new EnumMap<StorageType, Object>(StorageType.class);
 		for (StorageType s : StorageType.values()) {
-			map.put(s, pref.getString(s.getKey(), null));
+			getStorageTypeFromPref(s);
+
 		}
 
+	}
+
+	private void getStorageTypeFromPref(StorageType s) {
+		if (s.cls.isAssignableFrom(Boolean.class)) {
+			map.put(s, pref.getBoolean(s.getKey(), false));
+		} else if (s.cls.isAssignableFrom(String.class)) {
+			map.put(s, pref.getString(s.getKey(), null));
+		}
 	}
 
 	/**
@@ -50,7 +58,7 @@ public class Storage {
 		if (map.get(s) != null) {
 			return map.get(s).toString();
 		} else {
-			return null;
+			return "";
 		}
 	}
 
@@ -78,7 +86,7 @@ public class Storage {
 
 	/**
 	 * Save to local storage.
-	 * 
+	 *
 	 * @param s the storage type
 	 * @param value the value
 	 */
@@ -91,7 +99,7 @@ public class Storage {
 
 	/**
 	 * Save boolean to local storage.
-	 * 
+	 *
 	 * @param s the storage type
 	 * @param value the value
 	 */
