@@ -2,10 +2,14 @@ package com.josh.nzb.downloader.objects.Sab;
 
 import java.util.List;
 
+import com.josh.nzb.downloader.utils.JsonElement;
+import com.josh.nzb.downloader.utils.JsonPojo;
+import com.josh.nzb.downloader.utils.JsonType;
+
 /**
  * @author RichardsJ Sab History object
  */
-public class SabHistory {
+public class SabHistory extends JsonPojo {
 
 	private String totalSize;
 
@@ -22,6 +26,30 @@ public class SabHistory {
 	private boolean restartReq;
 
 	private List<SabHistorySlot> slots;
+
+	@JsonElement(type = JsonType.JSON_KEY)
+	public static final String totalSizeKeyKey = "total_size";
+
+	@JsonElement(type = JsonType.JSON_KEY)
+	public static final String monthSizeKey = "month_size";
+
+	@JsonElement(type = JsonType.JSON_KEY)
+	public static final String weekSizeKey = "week_size";
+
+	@JsonElement(type = JsonType.JSON_KEY)
+	public static final String cacheLimitKey = "cache_limit";
+
+	@JsonElement(type = JsonType.JSON_KEY)
+	public static final String pausedKey = "paused";
+
+	@JsonElement(type = JsonType.JSON_KEY)
+	public static final String newRelUrlKey = "new_rel_url";
+
+	@JsonElement(type = JsonType.JSON_KEY)
+	public static final String restartReqKey = "restart_req";
+
+	@JsonElement(type = JsonType.JSON_KEY)
+	public static final String slotsKey = "slots";
 
 	public String getTotalSize() {
 		return totalSize;

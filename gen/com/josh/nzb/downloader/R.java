@@ -73,15 +73,16 @@ public final class R {
         public static final int welcome_text=0x7f060002;
     }
     public static final class style {
-        public static final int ActivityStyleBlue=0x7f070008;
-        public static final int ActivityStyleYellow=0x7f070007;
+        public static final int ActivityStyleBlue=0x7f070009;
+        public static final int ActivityStyleYellow=0x7f070008;
         public static final int AppTheme=0x7f070002;
         public static final int EditTextStyle=0x7f070001;
         /**  style for the action bar backgrounds 
          */
-        public static final int MyActionBar=0x7f070006;
+        public static final int MyActionBar=0x7f070007;
         public static final int TitleTextStyle=0x7f070000;
-        public static final int editText=0x7f070005;
+        public static final int editTextBlue=0x7f070005;
+        public static final int editTextYellow=0x7f070006;
         public static final int textViewBlue=0x7f070003;
         public static final int textViewYellow=0x7f070004;
     }
